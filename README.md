@@ -17,16 +17,16 @@ El modelo implementado utiliza una arquitectura **Encoder–Decoder** basada en 
 
 ---
 
-## Arquitectura Utilizada
+## Arquitecturas Utilizadas
 
-- **Modelo:** U-Net 2D  
+- **Modelo:** U-Net 2D, y se incluye modelo U-net + Funnel y el modelo U-net++ archivo U-net 
 - **Framework:** PyTorch  
 - **Optimización:** Adam y AdamW  
 - **Funciones de pérdida:**  
   - `Dice Loss`  
   - `Binary Cross Entropy with Logits (BCE)`  
   - Combinación `0.5 * BCE + 0.5 * Dice`  
-
+  - Focall loss
 El modelo sigue el esquema clásico de *encoder-decoder*:
 - El **encoder** extrae características progresivamente reduciendo la resolución espacial.  
 - El **decoder** reconstruye la segmentación incrementando la resolución hasta el tamaño original.  
