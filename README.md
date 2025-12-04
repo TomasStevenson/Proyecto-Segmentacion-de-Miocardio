@@ -32,6 +32,12 @@ El modelo sigue el esquema clásico de *encoder-decoder*:
 - El **decoder** reconstruye la segmentación incrementando la resolución hasta el tamaño original.  
 - Se incluyen *skip connections* para conservar detalles espaciales.
 
+- archivo "unetfunnel_focal_loss1" contiene entrenamientos del modelo U-net + Funnel usando 3 variaciones distintas de parametro de focal loss:
+     - Gamma = 2.0  y alpha = 0.65
+     - Gamma = 2.0  y alpha = 0.75
+     - Gamma = 2.0  y alpha = 0.95
+
+- Por otro lado, el archivo "unetfunnel_focal_loss2" contiene un entrenamiento mas con Gamma = 2.0 y alpha = 0.85
 ---
 
 ## Dataset
